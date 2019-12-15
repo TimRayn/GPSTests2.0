@@ -4,8 +4,11 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:gif="http://wpfanimatedgif.codeplex.com"
+        xmlns:viewModels="clr-namespace:GPSTests2._0.ViewModels"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="TestsGPS" Height="450" Width="800"
+        d:DataContext="{d:DesignInstance viewModels:MainWindowViewModel, IsDesignTimeCreatable=False}">
+        
     <Window.Background>
         <ImageBrush ImageSource="Images/sattelite.jpg"/>
     </Window.Background>
@@ -24,10 +27,10 @@
         </Grid.ColumnDefinitions>
         <Image gif:ImageBehavior.AnimatedSource="Images/30183732ZCUhM2yd.gif" />
         <StackPanel Grid.Column="1" VerticalAlignment="Center">
-            <Button Content="Пройти тестування"/>
-            <Button Content="Теорія"/>
-            <Button Content="Автори"/>
-            <Button Content="Вийти"/>
+            <Button Content="Пройти тестування" Command="{Binding BtnTestRunCommand}"/>
+            <Button Content="Теорія" Command="{Binding BtnTheoryCommand}"/>
+            <Button Content="Автори" Command="{Binding BtnCreditsCommand}"/>
+            <Button Content="Вийти" Command="{Binding BtnExitCommand}"/>
         </StackPanel>
     </Grid>
 </Window>

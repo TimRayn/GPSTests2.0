@@ -11,18 +11,16 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
-using GPSTests2._0.ViewModels;
 
 namespace GPSTests2._0.Windows
 {
     /// <summary>
-    /// Interaction logic for TestRunWindow.xaml
+    /// Interaction logic for Credits.xaml
     /// </summary>
-    public partial class TestRunWindow : Window
+    public partial class Credits : Window
     {
-        public TestRunWindow()
+        public Credits()
         {
-            DataContext = new TestRunWindowViewModel();
             InitializeComponent();
         }
     }

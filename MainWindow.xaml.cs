@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using GPSTests2._0.ViewModels;
 
 namespace GPSTests2._0
 {
@@ -22,6 +23,7 @@ namespace GPSTests2._0
     {
         public MainWindow()
         {
+            DataContext = new MainWindowViewModel();
             InitializeComponent();
         }
     }

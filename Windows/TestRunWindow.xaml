@@ -4,9 +4,31 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:GPSTests2._0.Windows"
+        xmlns:viewModels="clr-namespace:GPSTests2._0.ViewModels"
         mc:Ignorable="d"
-        Title="TestRunWindow" Height="450" Width="800">
+        Title="TestRunWindow" Height="450" Width="800"
+        d:DataContext="{d:DesignInstance viewModels:TestRunWindowViewModel, IsDesignTimeCreatable=False}">
+    <Window.Background>
+        <ImageBrush ImageSource="../Images/sattelite.jpg"/>
+    </Window.Background>
+    <Window.Resources>
+        <Style TargetType="RadioButton">
+            <Setter Property="Foreground" Value="AliceBlue"/>
+            <Setter Property="Margin" Value="50,10,0,0"/>
+            <Setter Property="FontSize" Value="16"/>
+        </Style>
+    </Window.Resources>
     <Grid>
-        
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <TextBlock></TextBlock>
+        <StackPanel Grid.Row="1">
+            <RadioButton Content="asfasfafds"/>
+            <RadioButton Content="sdgfd"/>
+            <RadioButton Content="sfgsd"/>
+            <RadioButton Content="fsdgsdvg"/>
+        </StackPanel>
     </Grid>
 </Window>

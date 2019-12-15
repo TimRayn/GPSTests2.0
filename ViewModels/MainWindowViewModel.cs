@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Input;
+using GPSTests2._0.Windows;
 
 namespace GPSTests2._0.ViewModels
 {
@@ -18,13 +19,28 @@ namespace GPSTests2._0.ViewModels
 
         public MainWindowViewModel()
         {
-            BtnTheoryCommand = new CommandHandler(OpenTestRunWindow, true);
+            BtnTestRunCommand = new CommandHandler(OpenTestRunWindow, true);
             BtnExitCommand = new CommandHandler(Exit, true);
+            BtnCreditsCommand = new CommandHandler(OpenCreditsWindow, true);
+            BtnTheoryCommand = new CommandHandler(OpenTheoryWindow, true);
+        }
+
+        private void OpenTheoryWindow()
+        {
+            var theoryWindow = new Theory();
+            theoryWindow.Show();
+        }
+
+        private void OpenCreditsWindow()
+        {
+            var creditsWindow = new Credits();
+            creditsWindow.Show();
         }
 
         private void OpenTestRunWindow()
         {
-
+            var testWindow = new TestRunWindow();
+            testWindow.Show();
         }
 
         private void Exit()
